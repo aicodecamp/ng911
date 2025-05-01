@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>911 Emergency Call in Multiple Languages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th {
+            background-color: #d9534f;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffefef;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        .role {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .text {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .text:hover {
+            background-color: #ffe6e6;
+        }
+        .playing {
+            background-color: #ffcccc;
+        }
+        .instruction {
+            text-align: center;
+            font-style: italic;
+            margin: 20px 0;
+            color: #666;
+        }
+        .mp3-name {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 3px;
+            font-family: monospace;
+        }
+        .content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>911 Emergency Call in Multiple Languages</h1>
+        
+        <p class="instruction">Click on any text to hear the audio</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>English</th>
+                    <th>French</th>
+                    <th>Spanish</th>
+                    <th>Chinese (Simplified)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="role">Dispatcher</td>
+                    <td>
+                        <div class="text" data-audio="en_dispatcher_1">
+                            <div class="mp3-name">en_dispatcher_1.mp3</div>
+                            <div class="content">911, what is your emergency?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_dispatcher_1">
+                            <div class="mp3-name">fr_dispatcher_1.mp3</div>
+                            <div class="content">911, quelle est votre urgence?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_dispatcher_1">
+                            <div class="mp3-name">es_dispatcher_1.mp3</div>
+                            <div class="content">911, ¿cuál es su emergencia?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_dispatcher_1">
+                            <div class="mp3-name">zh_dispatcher_1.mp3</div>
+                            <div class="content">911，您有什么紧急情况？</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Caller</td>
+                    <td>
+                        <div class="text" data-audio="en_caller_1">
+                            <div class="mp3-name">en_caller_1.mp3</div>
+                            <div class="content">There is a car crash.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_caller_1">
+                            <div class="mp3-name">fr_caller_1.mp3</div>
+                            <div class="content">Il y a un accident de voiture.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_caller_1">
+                            <div class="mp3-name">es_caller_1.mp3</div>
+                            <div class="content">Hay un accidente de coche.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_caller_1">
+                            <div class="mp3-name">zh_caller_1.mp3</div>
+                            <div class="content">这里发生了一起车祸。</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Dispatcher</td>
+                    <td>
+                        <div class="text" data-audio="en_dispatcher_2">
+                            <div class="mp3-name">en_dispatcher_2.mp3</div>
+                            <div class="content">Where are you?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_dispatcher_2">
+                            <div class="mp3-name">fr_dispatcher_2.mp3</div>
+                            <div class="content">Où êtes-vous?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_dispatcher_2">
+                            <div class="mp3-name">es_dispatcher_2.mp3</div>
+                            <div class="content">¿Dónde está usted?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_dispatcher_2">
+                            <div class="mp3-name">zh_dispatcher_2.mp3</div>
+                            <div class="content">您在哪里？</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Caller</td>
+                    <td>
+                        <div class="text" data-audio="en_caller_2">
+                            <div class="mp3-name">en_caller_2.mp3</div>
+                            <div class="content">On Main Street, near the gas station.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_caller_2">
+                            <div class="mp3-name">fr_caller_2.mp3</div>
+                            <div class="content">Sur la rue Principale, près de la station-service.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_caller_2">
+                            <div class="mp3-name">es_caller_2.mp3</div>
+                            <div class="content">En la Calle Principal, cerca de la gasolinera.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_caller_2">
+                            <div class="mp3-name">zh_caller_2.mp3</div>
+                            <div class="content">在主街上，靠近加油站。</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Dispatcher</td>
+                    <td>
+                        <div class="text" data-audio="en_dispatcher_3">
+                            <div class="mp3-name">en_dispatcher_3.mp3</div>
+                            <div class="content">Is anyone hurt?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_dispatcher_3">
+                            <div class="mp3-name">fr_dispatcher_3.mp3</div>
+                            <div class="content">Est-ce que quelqu'un est blessé?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_dispatcher_3">
+                            <div class="mp3-name">es_dispatcher_3.mp3</div>
+                            <div class="content">¿Hay alguien herido?</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_dispatcher_3">
+                            <div class="mp3-name">zh_dispatcher_3.mp3</div>
+                            <div class="content">有人受伤吗？</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Caller</td>
+                    <td>
+                        <div class="text" data-audio="en_caller_3">
+                            <div class="mp3-name">en_caller_3.mp3</div>
+                            <div class="content">Yes. One man is not moving.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_caller_3">
+                            <div class="mp3-name">fr_caller_3.mp3</div>
+                            <div class="content">Oui. Un homme ne bouge pas.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_caller_3">
+                            <div class="mp3-name">es_caller_3.mp3</div>
+                            <div class="content">Sí. Un hombre no se mueve.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_caller_3">
+                            <div class="mp3-name">zh_caller_3.mp3</div>
+                            <div class="content">是的。有一个人不动了。</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Dispatcher</td>
+                    <td>
+                        <div class="text" data-audio="en_dispatcher_4">
+                            <div class="mp3-name">en_dispatcher_4.mp3</div>
+                            <div class="content">Help is coming. Stay there. Stay safe.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_dispatcher_4">
+                            <div class="mp3-name">fr_dispatcher_4.mp3</div>
+                            <div class="content">Les secours arrivent. Restez là. Restez en sécurité.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_dispatcher_4">
+                            <div class="mp3-name">es_dispatcher_4.mp3</div>
+                            <div class="content">La ayuda está en camino. Quédese allí. Manténgase seguro.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_dispatcher_4">
+                            <div class="mp3-name">zh_dispatcher_4.mp3</div>
+                            <div class="content">救援正在赶来。请留在原地。注意安全。</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="role">Caller</td>
+                    <td>
+                        <div class="text" data-audio="en_caller_4">
+                            <div class="mp3-name">en_caller_4.mp3</div>
+                            <div class="content">Okay. Thank you.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="fr_caller_4">
+                            <div class="mp3-name">fr_caller_4.mp3</div>
+                            <div class="content">D'accord. Merci.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="es_caller_4">
+                            <div class="mp3-name">es_caller_4.mp3</div>
+                            <div class="content">Está bien. Gracias.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text" data-audio="zh_caller_4">
+                            <div class="mp3-name">zh_caller_4.mp3</div>
+                            <div class="content">好的。谢谢。</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create audio element
+            const audioEl = document.createElement('audio');
+            audioEl.controls = false; // Hide native controls
+            document.body.appendChild(audioEl);
+            
+            // Get all text elements
+            const textElements = document.querySelectorAll('.text');
+            
+            // Create a status indicator
+            const statusIndicator = document.createElement('div');
+            statusIndicator.style.position = 'fixed';
+            statusIndicator.style.bottom = '20px';
+            statusIndicator.style.right = '20px';
+            statusIndicator.style.padding = '10px 20px';
+            statusIndicator.style.background = '#d9534f';
+            statusIndicator.style.color = 'white';
+            statusIndicator.style.borderRadius = '4px';
+            statusIndicator.style.display = 'none';
+            statusIndicator.style.zIndex = '1000';
+            statusIndicator.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+            document.body.appendChild(statusIndicator);
+            
+            // Add click event to all text elements
+            textElements.forEach(element => {
+                element.addEventListener('click', function() {
+                    // Remove playing class from all elements
+                    textElements.forEach(el => el.classList.remove('playing'));
+                    
+                    // Add playing class to clicked element
+                    this.classList.add('playing');
+                    
+                    // Get audio file name
+                    const audioFileName = this.getAttribute('data-audio') + '.mp3';
+                    
+                    // Set audio source and play
+                    audioEl.src = audioFileName;
+                    
+                    // Show loading indicator
+                    statusIndicator.textContent = `Loading: ${audioFileName}`;
+                    statusIndicator.style.display = 'block';
+                    
+                    // Play the audio
+                    audioEl.play().then(() => {
+                        // Update status when playing
+                        statusIndicator.textContent = `Playing: ${audioFileName}`;
+                        
+                        // Hide status when done
+                        audioEl.onended = () => {
+                            statusIndicator.style.display = 'none';
+                            this.classList.remove('playing');
+                        };
+                    }).catch(error => {
+                        // Show error if audio fails to play
+                        console.error('Error playing audio:', error);
+                        statusIndicator.textContent = `Error playing: ${audioFileName}`;
+                        setTimeout(() => {
+                            statusIndicator.style.display = 'none';
+                            this.classList.remove('playing');
+                        }, 3000);
+                    });
+                });
+            });
+            
+            // Add error handling for audio element
+            audioEl.onerror = function() {
+                statusIndicator.textContent = `Error loading audio file`;
+                setTimeout(() => {
+                    statusIndicator.style.display = 'none';
+                    textElements.forEach(el => el.classList.remove('playing'));
+                }, 3000);
+            };
+        });
+    </script>
+</body>
+</html>
